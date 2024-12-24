@@ -1,0 +1,364 @@
+@import url('https://fonts.cdnfonts.com/css/florencesans');
+:root{
+    --Primary-Primary: #203645;
+    --Base-Base-White: #FFF;
+    --Base-Base-Black: #333;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Florencesans Exp', sans-serif;
+  }
+
+body {
+    position: relative;
+    
+    width: 100vw;
+    margin: 0;
+    font-family: 'Florencesans Exp', sans-serif;
+    height: 100vh;
+}
+
+*:before, 
+*:after {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+button{
+  outline: none;
+  border: none;
+}
+
+.hero-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('https://images.unsplash.com/photo-1717167398817-121e3c283dbb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: left;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+.navigation{
+    z-index: 3;
+    width: 100%;
+    background-color: rgb(248,249,250);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link{
+    font-family: "Unitext Regular", sans-serif;
+    color: #203645;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.fa-lg:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.menu{
+    display: none;
+}
+.hero-content{
+    position: relative;
+    flex-direction: column;
+    padding: 60px 80px;
+    color: var(--Base-Base-White);
+    display: flex;
+    gap: 20px;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: 70%;
+}
+
+.header-text > h1 {
+    background-color: #dc3545;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Unitext Regular", sans-serif;
+}
+.header-text > h3 {
+    font-size: 3.3rem;
+    font-weight: bold;
+    line-height: 1.1em;
+    letter-spacing: 0.05em;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    font-size: 16px;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    width: 80%;
+}
+.subscribe-form > p{
+    font-family: "Unitext Regular", sans-serif;
+    font-size: 1.5em;
+}
+
+.subscribe-form > form {
+    display: flex;
+    width: 100%;
+}
+.subscribe-form > form  >input[type='email'] {
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 80%;
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    font-family: "Unitext Regular", sans-serif;
+}
+.subscribe-form > form  >input[type='submit'] {
+    padding: 15px;
+    font-family: "Unitext Regular", sans-serif;
+    font-size: 1.2em;
+    border: 1px solid #203645;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #203645;
+    color: #FFF;
+    width: 30%;
+    cursor: pointer;
+}
+input[type='submit']:hover{
+    filter: brightness(80%);
+    cursor: pointer;
+}
+.contact-container{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    max-width: 30%;
+    padding: 30px 20px 10px;
+    background-color: rgb(248, 249, 250);
+    text-align: center;
+    border-radius: 8px;
+}
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #203645;
+}
+.contact-content > h3{
+    font-family: "Unitext Regular", sans-serif;
+    font-size: 2em;
+}
+.contact-content > p{
+    font-family: "Unitext Regular", sans-serif;
+    font-size: 1.2em;
+    color: #7C7C7D;
+}
+.contact-content > form {
+}
+.contact-content > form >input, textarea {
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    border: 1px solid #7C7C7D;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 0.9em;
+    font-family: "Unitext Regular", sans-serif;
+}
+
+.contact-content > textarea{
+    margin: 0;
+}
+.contact-content > form > input[type="submit"] {
+    background-color: #203645;
+    color: #FFF;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+.contact-content > form > input[type="submit"]:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+@media screen and (min-width: 1460px){
+    .hero-wrapper{
+        background-position: center;
+    }
+    .navigation{
+        padding: 40px 100px;
+    }
+    .nav-link {
+        font-size: 2.3rem;
+    }
+
+    .fa-lg::before{
+        font-size: 1.8rem;
+    }
+    .hero-content{
+        margin: 5% 2%;
+        padding: 120px 35px;
+        gap: 60px;
+    }
+    .header-text{
+        gap: 60px;
+    }
+    .header-text > h1 {
+        padding: 16px;
+        font-size: 4.2rem;
+
+    }
+    .header-text > h3 {
+        font-size: 4.6rem;
+        line-height: 1em;
+        letter-spacing: 0.03em;
+    }
+    .subscribe-form {
+        gap: 30px;
+        width: 60%;
+    }
+    .subscribe-form > p{
+        font-size: 1.8em;
+    }
+    .subscribe-form > form  >input[type='email'] {
+        padding: 20px;
+        font-size: 1.8rem;
+        width: 80%;
+    }
+    .subscribe-form > form  >input[type='submit'] {
+        font-size: 2em;
+        width: 30%;
+        box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.15);
+
+    }
+    .contact-container{
+        position: absolute;
+        top: 6%;
+        right: 5%;
+        min-height: 80%;
+        max-width: 40%;
+    }
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 680px){
+    body{
+        height: auto;
+    }
+    .nav-buttons{
+        display: none;
+    }
+
+    .show-menu{
+        display: flex;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        background-color: inherit;
+        width: 100%;
+        padding-left: 20px;
+        
+    }
+    .nav-link{
+        font-size: 1.1rem;
+    }
+    .menu{
+        display: block;
+    }
+    .fa-bars, .fa-x{
+        display: block;
+        font-size: 24px;
+    }
+
+    .navigation{
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+    }
+    .hero-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('https://images.unsplash.com/photo-1717167398817-121e3c283dbb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-position: left;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .hero-content{
+        padding: 40px 20px;
+        flex-wrap: wrap;
+    }
+    .header-text{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .header-text > h1{
+        padding: 10px;
+        font-size: 2rem;
+    }
+    .header-text > h3 {
+        font-size: 2.3rem;
+        letter-spacing: 0.08em;
+    }
+    .subscribe-form{
+        width: 100%;
+        align-items: center;
+    }
+    .subscribe-form > p{
+        font-size: 1.3em;
+    }
+    .contact-container{
+        position: static;
+        max-width: 100%;
+    }
+    .subscribe-form > form  >input[type='email']{
+        width: autq;
+    }
+    .subscribe-form > form  >input[type='submit']{
+        padding: 8px;
+    }
+}
